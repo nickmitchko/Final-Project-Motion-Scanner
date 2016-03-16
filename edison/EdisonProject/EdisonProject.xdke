@@ -1,0 +1,60 @@
+{
+  "project": {
+    "projectSettingsVersion": "2.0.0",
+    "initialAutoPluginCount": 0,
+    "currentBuildConfiguration": null,
+    "projectFiles": {},
+    "projectDirectories": {}
+  },
+  "iot-tab": {
+    "fileStatus": {
+      "EdisonProject.xdk": {
+        "previousModTime": 1458158997364,
+        "modified": 1458158997364,
+        "seen": true,
+        "name": "EdisonProject.xdk"
+      },
+      "EdisonProject.xdke": {
+        "previousModTime": 1458162930107,
+        "modified": 1458162930107,
+        "seen": true,
+        "name": "EdisonProject.xdke"
+      },
+      "icon.png": {
+        "previousModTime": 1458158997225,
+        "modified": 1458158997225,
+        "seen": true,
+        "name": "icon.png"
+      },
+      "main.js": {
+        "previousModTime": 1458162997243,
+        "modified": 1458162997243,
+        "seen": true,
+        "name": "main.js"
+      },
+      "package.json": {
+        "previousModTime": 1458158997225,
+        "modified": 1458158997225,
+        "seen": true,
+        "name": "package.json"
+      },
+      "README.md": {
+        "previousModTime": 1458158997225,
+        "modified": 1458158997225,
+        "seen": true,
+        "name": "README.md"
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1458158997353,
+        "modified": 1458158997353,
+        "seen": true,
+        "name": "xdk/project-info.json"
+      }
+    },
+    "boardFileStatus": {
+      "main.js": {
+        "previousModTime": 1458163005031
+      }
+    }
+  }
+}
