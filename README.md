@@ -7,7 +7,7 @@ This data is then applied to a 3d Model of our house<sup>i</sup> and is rendered
 
 * Ryan Chan
 * Nicholai Mitchko
-* Aniket Soaji
+* Aniket Saoji
 
 ### Directory Structure
 
