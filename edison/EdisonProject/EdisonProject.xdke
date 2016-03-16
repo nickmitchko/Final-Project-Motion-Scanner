@@ -15,8 +15,8 @@
         "name": "EdisonProject.xdk"
       },
       "EdisonProject.xdke": {
-        "previousModTime": 1458162930107,
-        "modified": 1458162930107,
+        "previousModTime": 1458171130348,
+        "modified": 1458171130348,
         "seen": true,
         "name": "EdisonProject.xdke"
       },
@@ -27,14 +27,14 @@
         "name": "icon.png"
       },
       "main.js": {
-        "previousModTime": 1458162997243,
-        "modified": 1458162997243,
+        "previousModTime": 1458171162259,
+        "modified": 1458171162259,
         "seen": true,
         "name": "main.js"
       },
       "package.json": {
-        "previousModTime": 1458158997225,
-        "modified": 1458158997225,
+        "previousModTime": 1458170594609,
+        "modified": 1458170594609,
         "seen": true,
         "name": "package.json"
       },
@@ -49,11 +49,32 @@
         "modified": 1458158997353,
         "seen": true,
         "name": "xdk/project-info.json"
+      },
+      "dbsetup.js": {
+        "previousModTime": 1458170781533,
+        "modified": 1458170781533,
+        "seen": true,
+        "name": "dbsetup.js"
       }
     },
     "boardFileStatus": {
+      "icon.png": {
+        "previousModTime": 1458171215278
+      },
       "main.js": {
-        "previousModTime": 1458163005031
+        "previousModTime": 1458171215278
+      },
+      "package.json": {
+        "previousModTime": 1458171215278
+      },
+      "README.md": {
+        "previousModTime": 1458171215278
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1458171215278
+      },
+      "dbsetup.js": {
+        "previousModTime": 1458171215278
       }
     }
   }

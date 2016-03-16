@@ -1,16 +1,33 @@
-var mraa = require('mraa'); //require mraa
-console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the Intel XDK console
+// Author       : Nicholai Mitchko
+// Date         : 3/16/2016
+// File         : main.js
+// Description  : javascript file that collects motion sensor data and inputs it into a database
+// Platform     : Intel Edison
 
-//var myOnboardLed = new mraa.Gpio(3, false, true); //LED hooked up to digital pin (or built in pin on Galileo Gen1)
-var myOnboardLed = new mraa.Gpio(13); //LED hooked up to digital pin 13 (or built in pin on Intel Galileo Gen2 as well as Intel Edison)
-myOnboardLed.dir(mraa.DIR_OUT); //set the gpio direction to output
-var ledState = true; //Boolean to hold the state of Led
+var sys = require('sys')
+var exec = require('child_process').exec;
+function puts(error, stdout, stderr) { console.log(stdout); }
 
-function periodicActivity()
-{
-  myOnboardLed.write(ledState?1:0); //if ledState is true then write a '1' (high) otherwise write a '0' (low)
-  ledState = !ledState; //invert the ledState
-  setTimeout(periodicActivity,1000); //call the indicated function after 1 second (1000 milliseconds)
-}
+var MotionSensorPin = 13;                                   // Run the motion sensor on pin 13
+var mraa = require('mraa');                                 // Setup Code to Include The GPIO Library
+var motionInputSensor = new mraa.Gpio(MotionSensorPin);     // Get the MotionSensor input on whatever pin in defined in MotionSensorPin
+motionInputSensor.dir(mraa.DIR_IN);                         // Make Sure the GPIO Pin in set on input mode
 
-periodicActivity(); //call the periodicActivity function
+var mysql = require('mysql');                               // Setup code to include database functionality
+var connection = mysql.createConnection({
+  host     : 'localhost:3306',
+  user     : 'mitchko',
+  password : 'mMpGCQAH',
+  database : 'mitchko'
+});
+
+connection.connect();
+
+connection.query('SELECT * from `boringclub`', function(err, rows, fields) {
+  if (!err)
+    console.log('The solution is: ', rows);
+  else
+    console.log(err);
+});
+
+connection.end();
