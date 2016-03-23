@@ -23,18 +23,19 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="e9fe07a3-55fb-4533-a77b-3f8deb1507c5">
-        <schema name="mitchko" object-types="column, constraint, function, index, procedure, table, dataset trigger, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="e9fe07a3-55fb-4533-a77b-3f8deb1507c5">
-      <console name="CSCILAB" type="STANDARD" />
+      <console name="CSCILAB" type="STANDARD"><![CDATA[CREATE TABLE mitchko.motion (id int PRIMARY KEY, zone1 bool NOT NULL, zone2 bool NOT NULL, zone3 bool NOT NULL, zone4 bool NOT NULL, zone5 bool NOT NULL);
+
+INSERT INTO mitchko.motion VALUES(1, FALSE, FALSE, FALSE, FALSE, FALSE);
+
+UPDATE mitchko.motion SET zone1=TRUE where id=1;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-list connection-id="e9fe07a3-55fb-4533-a77b-3f8deb1507c5" dataset="mitchko.motion" active-filter-id="EMPTY_FILTER" />
     <filter-list connection-id="e9fe07a3-55fb-4533-a77b-3f8deb1507c5" dataset="mitchko.boringclub" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
@@ -101,7 +102,7 @@
           <password-expiry-time value="10" />
           <max-connection-pool-size value="7" />
           <alternative-statement-delimiter value="" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
         </details>
         <object-filters hide-empty-schemas="false">
           <object-type-filter use-master-settings="true">

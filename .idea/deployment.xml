@@ -2,24 +2,17 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="Artisan Serve">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
       <paths name="CSCILAB">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$/web" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="IntelEdison">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$/edison/EdisonProject" web="/" />
           </mappings>
         </serverdata>
       </paths>
