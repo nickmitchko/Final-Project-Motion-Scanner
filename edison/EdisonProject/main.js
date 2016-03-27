@@ -3,11 +3,13 @@
 // File         : main.js
 // Description  : javascript file that collects motion sensor data and inputs it into a database
 // Platform     : Intel Edison
-
-var MotionSensorPin = 13;                                   // Run the motion sensor on pin 13
 var mraa = require('mraa');                                 // Setup Code to Include The GPIO Library
-var motionInputSensor = new mraa.Gpio(MotionSensorPin);     // Get the MotionSensor input on whatever pin in defined in MotionSensorPin
+var motionInputSensor = new mraa.Gpio(13);                  // Get the MotionSensor input on whatever pin in defined in MotionSensorPin
+var motionInput2      = new mraa.Gpio(7);
+var motionInput3      = new mraa.Gpio(8);
 motionInputSensor.dir(mraa.DIR_IN);                         // Make Sure the GPIO Pin in set on input mode
+motionInput2.dir(mraa.DIR_IN);
+motionInput3.dir(mraa.DIR_IN);
 var tunnel = require('tunnel-ssh');
 var credentials = require('./credentials');
 /*var ContrastPin = 10;
@@ -41,10 +43,6 @@ var zones = new Array(false, false, false, false, false);
 
 function updateDatabase(){
     connection.query('UPDATE mitchko.motion SET zone1=' + (zones[0] ? 'TRUE': 'FALSE') + ' where id=1', function(err, rows, fields) {
-        if (!err)
-            console.log('Values Updated: ' + zones[0]);
-        else
-            console.log("Query Error" + err);
     });
 }
 
@@ -53,9 +51,10 @@ function resetZones(){
 }
 
 function checkForMotion(){
-    if(motionInputSensor.read() == 1){
-          zones[0] = true;
-    }
+    zones[0]= motionInputSensor.read() == 1? true: false;
+    zones[1]= motionInput2.read() == 1? true: false;
+    zones[2]= motionInput3.read() == 1? true: false;
+
 }
 
 function end(){
@@ -68,9 +67,12 @@ function end(){
     process.exit();
 }
 
-setInterval(checkForMotion, 10);
-setInterval(updateDatabase,5000);
-setInterval(resetZones, 5000);
+setTimeout(function(){
+    setInterval(checkForMotion, 100);
+    setInterval(updateDatabase,5000);
+    setInterval(resetZones, 5000);
+    setInterval(function (){console.log(zones);}, 5001);
+}, 15000);
 
 process.on('SIGINT', function () {
     end();
