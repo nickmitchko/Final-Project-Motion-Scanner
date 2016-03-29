@@ -52,21 +52,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">RSS Feeds</h4>
+                <h4 class="modal-title">Project Details</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="col-lg-2 control-label">NASA</label>
+                    <label class="col-lg-2 control-label">Intel Edison</label>
                     <div class="col-lg-10">
-                        <a href="http://www.nasa.gov/rss/image_of_the_day.rss">Nasa Picture of the Day</a>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label class="col-lg-2 control-label">David K.</label>
-                    <div class="col-lg-10">
-                        <a href="http://www.nasa.gov/rss/image_of_the_day.rss">David K. Photography</a>
+                        <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html">Project Page</a>
                     </div>
                 </div>
             </div>
